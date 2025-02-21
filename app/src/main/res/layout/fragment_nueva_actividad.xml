@@ -98,6 +98,22 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFrecuencia"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="Frecuencia">
+
+            <AutoCompleteTextView
+                android:id="@+id/spinnerFrecuencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <!-- Estado -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilEstado"

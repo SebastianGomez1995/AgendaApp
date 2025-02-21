@@ -2,16 +2,17 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("kotlin-kapt")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
     namespace = "com.example.agendaapp"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.agendaapp"
         minSdk = 21
-        targetSdk = 35
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -40,21 +41,29 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.ktx)
-    kapt(libs.androidx.room.compiler)
-
+    // AndroidX Core
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.swiperefreshlayout)
+
+    // Lifecycle
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    // Navigation
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
-    implementation(libs.androidx.room.common)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.common)
+    kapt(libs.androidx.room.compiler)
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
