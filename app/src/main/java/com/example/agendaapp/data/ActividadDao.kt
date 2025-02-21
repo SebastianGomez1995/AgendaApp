@@ -16,6 +16,9 @@ interface ActividadDao {
     @Query("SELECT * FROM actividades WHERE tipo = :tipo ORDER BY fechaInicio")
     fun obtenerPorTipo(tipo: TipoActividad): Flow<List<Actividad>>
 
+    @Query("SELECT * FROM actividades WHERE id = :id LIMIT 1")
+    fun obtenerPorId(id: Int): Flow<Actividad?>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertar(actividad: Actividad)
 

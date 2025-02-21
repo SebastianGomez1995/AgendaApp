@@ -47,7 +47,6 @@ class HomeFragment : Fragment() {
     aplicacion = requireActivity().application as AgendaApplication
     val factory = ActividadViewModelFactory((requireActivity().application as AgendaApplication).repositorio)
     actividadViewModel = ViewModelProvider(this, factory)[ActividadViewModel::class.java]
-
   }
 
   private fun setupRecyclerView() {
@@ -66,7 +65,7 @@ class HomeFragment : Fragment() {
   }
 
   private fun setupObservers() {
-    lifecycleScope.launch {
+    viewLifecycleOwner.lifecycleScope.launchWhenStarted {
       actividadViewModel.listaActividades.collect { actividades ->
         if (isAdded) {  // Verifica que el Fragmento sigue en la pantalla
           actividadAdapter.actualizarLista(actividades)
@@ -83,7 +82,7 @@ class HomeFragment : Fragment() {
 
     binding.swipeRefreshLayout.setOnRefreshListener {
       lifecycleScope.launch {
-
+        actividadViewModel.listaActividades
         binding.swipeRefreshLayout.isRefreshing = false
       }
     }
@@ -99,10 +98,9 @@ class HomeFragment : Fragment() {
     }
   }
 
- private fun editarActividad(actividad: Actividad) {
-   val action = HomeFragmentDirections.actionNavHomeToNuevaActividad(actividad.id)
-   findNavController().navigate(action)
-
+  private fun editarActividad(actividad: Actividad) {
+    val action = HomeFragmentDirections.actionHomeToNuevaActividad(actividad.id)
+    findNavController().navigate(action)
   }
 
   private fun mostrarDialogoConfirmacion(actividad: Actividad) {
@@ -125,6 +123,11 @@ class HomeFragment : Fragment() {
         Toast.LENGTH_SHORT
       ).show()
     }
+  }
+
+  override fun onResume() {
+    super.onResume()
+    actividadViewModel.listaActividades
   }
 
   override fun onDestroyView() {
