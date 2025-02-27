@@ -1,4 +1,4 @@
-package com.example.agendaapp.ui.home
+package com.example.agendaapp.ui.actividad
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog

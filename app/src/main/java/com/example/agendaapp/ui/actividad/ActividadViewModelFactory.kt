@@ -1,4 +1,4 @@
-package com.example.agendaapp.ui.home
+package com.example.agendaapp.ui.actividad
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

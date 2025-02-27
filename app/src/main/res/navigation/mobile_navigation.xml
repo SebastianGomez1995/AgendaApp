@@ -8,7 +8,7 @@
     <!-- Fragmento de inicio -->
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.agendaapp.ui.home.HomeFragment"
+        android:name="com.example.agendaapp.ui.actividad.HomeFragment"
         android:label="Agenda App"
         tools:layout="@layout/fragment_home">
 
@@ -35,7 +35,7 @@
     <!-- Fragmento para agregar nueva actividad -->
     <fragment
         android:id="@+id/nav_nueva_actividad"
-        android:name="com.example.agendaapp.ui.home.NuevaActividadFragment"
+        android:name="com.example.agendaapp.ui.actividad.NuevaActividadFragment"
         android:label="Agregar Nueva Actividad"
         tools:layout="@layout/fragment_nueva_actividad">
 
