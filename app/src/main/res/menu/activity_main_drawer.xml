@@ -9,9 +9,23 @@
             android:icon="@drawable/ic_add"
             android:title="Agregar Nueva Actividad" />
         <item
+            android:id="@+id/nav_nuevo_horario"
+            android:icon="@drawable/ic_add"
+            android:title="Agregar Materia" />
+        <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_empty_state"
             android:title="Lista de actividades" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_empty_state"
+            android:title="Horario" />
+        <item
+            android:id="@+id/nav_horarioFragment"
+            android:icon="@drawable/ic_empty_state"
+            android:title="Horario" />
+
+
 
     </group>
 </menu>

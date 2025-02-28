@@ -7,12 +7,15 @@ import android.content.Context
 import android.os.Build
 import com.example.agendaapp.data.AppDatabase
 import com.example.agendaapp.data.ActividadRepositorio
+import com.example.agendaapp.data.HorarioRepositorio
+
 class AgendaApplication : Application() {
     // Instancia de la base de datos usando inicialización lazy
     val database: AppDatabase by lazy { AppDatabase.getDatabase(this) }
 
-    // Repositorio, también con inicialización lazy
+    // Repositorios con inicialización lazy
     val repositorio: ActividadRepositorio by lazy { ActividadRepositorio(database.actividadDao()) }
+    val horarioRepo: HorarioRepositorio by lazy { HorarioRepositorio(database.horarioDao()) }
 
     companion object {
         const val CHANNEL_ID = "actividades_channel"

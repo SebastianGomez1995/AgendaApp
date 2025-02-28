@@ -5,19 +5,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.slideshow.SlideshowFragment" >
+    tools:context=".ui.slideshow.SlideshowFragment">
 
-    <TextView
-        android:id="@+id/text_slideshow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+    <Button
+        android:id="@+id/buttonLunes"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Lunes"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMartes"/>
+
+    <Button
+        android:id="@+id/buttonMartes"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Martes"
+        app:layout_constraintTop_toBottomOf="@id/buttonLunes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMiercoles"/>
+
+    <Button
+        android:id="@+id/buttonMiercoles"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Miércoles"
+        app:layout_constraintTop_toBottomOf="@id/buttonMartes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonJueves"/>
+
+    <Button
+        android:id="@+id/buttonJueves"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Jueves"
+        app:layout_constraintTop_toBottomOf="@id/buttonMiercoles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonViernes"/>
+
+    <Button
+        android:id="@+id/buttonViernes"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Viernes"
+        app:layout_constraintTop_toBottomOf="@id/buttonJueves"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSabado"/>
+
+    <Button
+        android:id="@+id/buttonSabado"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Sábado"
+        app:layout_constraintTop_toBottomOf="@id/buttonViernes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDomingo"/>
+
+    <Button
+        android:id="@+id/buttonDomingo"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Domingo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonSabado" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

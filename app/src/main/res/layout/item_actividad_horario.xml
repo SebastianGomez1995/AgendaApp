@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Nombre de la materia -->
+        <TextView
+            android:id="@+id/tvMateria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Materia"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <!-- Salón -->
+        <TextView
+            android:id="@+id/tvSalon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salón: X"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+
+        <!-- Día de la semana -->
+        <TextView
+            android:id="@+id/tvDiaSemana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Día: Lunes"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+
+        <!-- Horarios -->
+        <TextView
+            android:id="@+id/tvHoraInicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inicio: 08:00"
+            android:textSize="14sp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tvHoraFin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fin: 10:00"
+            android:textSize="14sp"
+            android:textColor="@android:color/black" />
+
+        <!-- Contenedor de botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="8dp">
+
+            <!-- Botón Editar -->
+            <ImageButton
+                android:id="@+id/btnEditar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackground"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_menu_edit"
+                android:contentDescription="Editar" />
+
+            <!-- Botón Eliminar -->
+            <ImageButton
+                android:id="@+id/btnEliminar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackground"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_menu_delete"
+                android:contentDescription="Eliminar" />
+        </LinearLayout>
+
+        <!-- Icono de notificación (visible solo si está activado) -->
+        <ImageView
+            android:id="@+id/iconNotificacion"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_dialog_info"
+            android:visibility="gone"
+            android:layout_gravity="end"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Campo para el nombre de la materia -->
+        <EditText
+            android:id="@+id/editTextMateria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Materia"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Campo para el salón -->
+        <EditText
+            android:id="@+id/editTextSalon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Salón"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Selector de día de la semana -->
+        <Spinner
+            android:id="@+id/spinnerDia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/dias_semana"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Selector de hora de inicio -->
+        <Button
+            android:id="@+id/btnHoraInicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Hora Inicio"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Selector de hora de fin -->
+        <Button
+            android:id="@+id/btnHoraFin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Hora Fin"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Switch para activar notificaciones -->
+        <Switch
+            android:id="@+id/switchNotificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activar Notificación"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Botón para guardar -->
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar"/>
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"/>
+
+    </LinearLayout>
+</ScrollView>

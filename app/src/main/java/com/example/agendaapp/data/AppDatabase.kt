@@ -1,17 +1,17 @@
 package com.example.agendaapp.data
 
-import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverters
+import android.content.Context
 import com.example.agendaapp.model.Actividad
-import com.example.agendaapp.util.Converters
+import com.example.agendaapp.model.Horario
 
-@Database(entities = [Actividad::class], version = 1, exportSchema = false)
-@TypeConverters(Converters::class)
+@Database(entities = [Actividad::class, Horario::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
+
     abstract fun actividadDao(): ActividadDao
+    abstract fun horarioDao(): HorarioDao
 
     companion object {
         @Volatile
@@ -23,9 +23,7 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "agenda_database"
-                )
-                    .fallbackToDestructiveMigration()
-                    .build()
+                ).build()
                 INSTANCE = instance
                 instance
             }

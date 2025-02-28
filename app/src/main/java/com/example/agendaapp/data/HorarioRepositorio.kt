@@ -2,7 +2,7 @@ package com.example.agendaapp.data
 
 
 import com.example.agendaapp.model.Horario
-import com.example.agendaapp.model.diaSemana
+
 import kotlinx.coroutines.flow.Flow
 
 class HorarioRepositorio(private val horarioDao: HorarioDao) {

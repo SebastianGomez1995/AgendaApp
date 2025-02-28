@@ -18,18 +18,12 @@
             app:destination="@id/nav_nueva_actividad" />
     </fragment>
 
-    <!-- Fragmento de galería -->
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.agendaapp.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
 
     <!-- Fragmento de diapositivas -->
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.example.agendaapp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="Horario"
         tools:layout="@layout/fragment_slideshow" />
 
     <!-- Fragmento para agregar nueva actividad -->
@@ -44,6 +38,29 @@
             android:name="actividadId"
             app:argType="integer"
             android:defaultValue="-1" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_nuevo_horario"
+        android:name="com.example.agendaapp.ui.slideshow.NuevoHorarioFragment"
+        android:label="Agregar Materia"
+        tools:layout="@layout/fragment_nuevo_horario">
+        <argument
+            android:name="horarioId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_horarioFragment"
+        android:name="com.example.agendaapp.ui.slideshow.HorarioFragment"
+        android:label="Horario"
+        tools:layout="@layout/fragment_horario" >
+
+
+    <action
+            android:id="@+id/action_horarioFragment_to_nuevoHorario"
+            app:destination="@id/nav_nuevo_horario" />
     </fragment>
 
 </navigation>
